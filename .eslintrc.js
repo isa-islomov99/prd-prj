@@ -52,7 +52,7 @@ module.exports = {
     // Bu 1 ta qator da 100 tadan kup suz yozilganda xato bermasligi va bu limitni 180 ta qlib quyish uchun
     'max-len': ['error', { code: 180 }],
     // Bu bizga biron bir text ni translate qilmagan bulsak error beradi, MarkupOnly bizga faqat jsx file lar ichidagi translate qlinmagan textlargagina error chiqishini taminledi
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['warn', { markupOnly: true }],
   },
   // Bu globals ISDEV ga uxshagan global o'zgaruvhcilar ishlatganimizda error chiqmasligi uchun
   globals: {

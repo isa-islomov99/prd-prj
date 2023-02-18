@@ -1,7 +1,5 @@
 {
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate",
-  "Главная страница": "Main page",
-  "Язык": "English",
-  "новый перевод": "новый перевод"
+  "main_page": "Main page",
+  "lang": "English",
+  "not_fount_page": "Not Fount Page"
 }

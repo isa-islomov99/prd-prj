@@ -39,7 +39,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         loader: 'css-loader',
         options: {
           modules: {
-            // build da oddiy scss file un ham module niy classlarni generatsiya qiliberopti, auto orqali biz file ni oxiri module.scss bn tugagagn yoki yuqligini aniqladik
+            // build da oddiy scss file un ham module niy classlarni generatsiya qiliberopti, auto orqali biz file ni oxiri module.scss bn tugagan yoki yuqligini aniqladik
             // shunga qarab module bulmasa class generatsiya qilmemiz
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
             // Bu orqali biz mode dev bulsa module niy class larni tushunarli qldik, a prod mode da 8 belgili classname generatsiya qlib ber dedik

@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
 export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
@@ -23,5 +24,10 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
     }),
     // ushbu plugin prj ni biron qismidia uzgarish qilgnanimizda page ni refresh qimasdan uzi automatic yangilab beradi uzgarishlarni
     new webpack.HotModuleReplacementPlugin(),
+    // BundleAnalyzerPlugin prj run bulganda yoki build bulganda alohida tabda bundle ni kuzatib borish imkonini beradi
+    new BundleAnalyzerPlugin({
+      // Har safar run qilganda alohida tab ga analyzer chiqmasligi uchun
+      openAnalyzer: false,
+    }),
   ];
 }

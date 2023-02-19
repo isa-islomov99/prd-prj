@@ -38,5 +38,7 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  // testing library/react ishlashi un
+  "include": ["./config/jest/setupTest.ts", "./src/**/*.ts", "./src/**/*.tsx"]
 }
